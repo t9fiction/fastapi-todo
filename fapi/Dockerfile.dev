@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install poetry
 
 # Copy only the pyproject.toml and poetry.lock to leverage Docker caching
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml .
 
 # Configuration to avoid creating virtual environments inside the Docker container
 RUN poetry config virtualenvs.create false

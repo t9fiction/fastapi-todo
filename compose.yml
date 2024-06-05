@@ -3,6 +3,7 @@ services:
     build:
       context: ./fapi
       dockerfile: Dockerfile.dev
+    container_name: todo-api
     ports:
       - '8000:8000'
     networks:
@@ -12,4 +13,5 @@ services:
       
 networks:
   todo:
+    name: todo-net
     driver: bridge
